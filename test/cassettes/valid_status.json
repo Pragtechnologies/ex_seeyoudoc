@@ -1,0 +1,31 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "",
+      "url": "http://localhost:4100/api/status",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": false,
+      "type": "ok",
+      "body": "{\"data\":{\"status\":\"running\",\"version\":\"4.0.0\"}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "47",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 30 Jan 2024 06:38:06 GMT",
+        "server": "Cowboy",
+        "x-request-id": "F68MpO42v2aoY6YAANAC"
+      },
+      "status_code": 200
+    }
+  }
+]
