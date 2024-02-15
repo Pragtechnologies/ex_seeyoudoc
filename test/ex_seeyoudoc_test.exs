@@ -7,8 +7,8 @@ defmodule ExSeeyoudocTest do
     :ok
   end
 
-  describe "status/0" do 
-    test "will return the status" do 
+  describe "status/0" do
+    test "will return the status" do
       use_cassette "valid_status" do
         assert {:ok, %{body: %{"data" => body}}} = ExSeeyoudoc.status()
         assert body["status"] == "running"

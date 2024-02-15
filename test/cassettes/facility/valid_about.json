@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "",
+      "url": "http://localhost:4100/api/facility/about",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "FETxtb1aomd+784ZXD7VQULXh6k=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": false,
+      "type": "ok",
+      "body": "{\"data\":{\"facility\":{\"id\":\"12ff4888-fd87-4fc3-b4ae-8878d425e1ac\",\"name\":\"Metro Antipolo Hospital and Medical Center\",\"profile\":{\"mission\":null,\"vision\":null,\"core_values\":null,\"about_us_title\":\"hey\",\"about_us_description\":\"hey\"},\"slug\":\"metro-antipolo-hospital-and-medical-center\"}}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "283",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 15 Feb 2024 07:56:27 GMT",
+        "location": "/api/facility/about",
+        "server": "Cowboy",
+        "x-request-id": "F7P6NJltT5GEjDMAACVB"
+      },
+      "status_code": 200
+    }
+  }
+]
