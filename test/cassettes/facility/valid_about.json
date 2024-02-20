@@ -1,32 +1,32 @@
 [
   {
     "request": {
-      "options": [],
       "body": "",
-      "url": "http://localhost:4100/api/facility/about",
       "headers": {
         "accept-encoding": "gzip",
-        "api-key": "FETxtb1aomd+784ZXD7VQULXh6k=",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
         "content-type": "application/json",
         "user-agent": "req/0.4.8"
       },
       "method": "get",
-      "request_body": ""
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/about"
     },
     "response": {
       "binary": false,
-      "type": "ok",
-      "body": "{\"data\":{\"facility\":{\"id\":\"12ff4888-fd87-4fc3-b4ae-8878d425e1ac\",\"name\":\"Metro Antipolo Hospital and Medical Center\",\"profile\":{\"mission\":null,\"vision\":null,\"core_values\":null,\"about_us_title\":\"hey\",\"about_us_description\":\"hey\"},\"slug\":\"metro-antipolo-hospital-and-medical-center\"}}}",
+      "body": "{\"data\":{\"facility\":{\"id\":\"5ad14cc2-b74e-48f6-a3a6-5597f2a1261d\",\"name\":\"Metro Antipolo Hospital and Medical Center -13\",\"profile\":{\"about_us_description\":null,\"about_us_title\":\"test -2dsds\",\"core_values\":null,\"mission\":\"M – Provide quality, preventive and promotive Medical health care services to the community\\n\\nA – Acquire modern equipment and upgrade facilities to improve patient care\\n\\nH – Produce Highly motivated well-trained professionals\\n\\nM – Maximize resources for business excellence and sustainability\\n\\nC – Commit to uphold human dignity and respect for life and right to health\\n\\nI – Promote Innovative and Ethical patient management\",\"vision\":\"METRO ANTIPOLO HOSPITAL AND MEDICAL CENTER shall be the preferred level 3 hospital providing excellent health care services, training, and research in Rizal province and eastern National Capital Region by 2028.\"},\"slug\":\"metro-antipolo-hospital-and-medical-center--13\"},\"layout\":false}}",
       "headers": {
         "cache-control": "max-age=0, private, must-revalidate",
-        "content-length": "283",
+        "content-length": "965",
         "content-type": "application/json; charset=utf-8",
-        "date": "Thu, 15 Feb 2024 07:56:27 GMT",
+        "date": "Tue, 20 Feb 2024 06:17:01 GMT",
         "location": "/api/facility/about",
         "server": "Cowboy",
-        "x-request-id": "F7P6NJltT5GEjDMAACVB"
+        "x-request-id": "F7V9rpb5tBtJy6kAAC3h"
       },
-      "status_code": 200
+      "status_code": 200,
+      "type": "ok"
     }
   }
 ]
