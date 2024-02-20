@@ -179,8 +179,63 @@ defmodule ExSeeyoudoc.FacilityTest do
                    "title" => "NURSES",
                    "updated_at" => "2024-02-20T07:27:56.000000Z"
                  }
-               } =
-                 body
+               } = body
+      end
+    end
+  end
+
+  describe "services/1" do
+    test "will return the services data" do
+      use_cassette "valid_services" do
+        headers = %{
+          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
+        }
+
+        assert {:ok, %{body: %{"data" => body}}} =
+                 ExSeeyoudoc.Facility.services(headers)
+
+        assert %{
+                 "entries" => [
+                   %{
+                     "description" =>
+                       "Twenty-four hour Holter monitoring is a continuous test to record your heart's rate and rhythm for 24 hours.",
+                     "id" => "44c2be63-46c2-4365-bc5a-8522ee573d61",
+                     "method" => "virtual",
+                     "name" => "24-Hour Holter Monitoring"
+                   }
+                 ],
+                 "layout" => false,
+                 "page_number" => 1,
+                 "page_size" => 10,
+                 "total_entries" => 1,
+                 "total_pages" => 1
+               } = body
+      end
+    end
+
+    test "will return the services data for a given slug" do
+      use_cassette "valid_get_services" do
+        headers = %{
+          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
+        }
+
+        slug = "44c2be63-46c2-4365-bc5a-8522ee573d61"
+
+        assert {:ok, %{body: %{"data" => body}}} =
+                 ExSeeyoudoc.Facility.get_services(headers, slug)
+
+        assert %{
+                 "service" => %{
+                   "doctors" => [],
+                   "service" => %{
+                     "description" =>
+                       "Twenty-four hour Holter monitoring is a continuous test to record your heart's rate and rhythm for 24 hours.",
+                     "id" => "44c2be63-46c2-4365-bc5a-8522ee573d61",
+                     "method" => "virtual",
+                     "name" => "24-Hour Holter Monitoring"
+                   }
+                 }
+               } = body
       end
     end
   end
