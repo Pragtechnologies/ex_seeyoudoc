@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/careers"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"entries\":[{\"active\":true,\"banner\":\"\",\"description\":\"Metro Antipolo Hospital and Medical Center is hiring NURSES! 💙 Come and join our team!\",\"end_datetime\":\"2024-02-21T15:27:00Z\",\"featured\":true,\"id\":\"d920579e-4ef4-4cb5-9c5f-63fc5b150250\",\"inserted_at\":\"2024-02-20T07:27:56.000000Z\",\"short_description\":\"Metro Antipolo Hospital and Medical Center is hiring NURSES! 💙 Come and join our team!\",\"slug\":\"nurses\",\"start_datetime\":\"2024-02-20T15:27:00Z\",\"title\":\"NURSES\",\"updated_at\":\"2024-02-20T07:27:56.000000Z\"}],\"layout\":false,\"page_number\":1,\"page_size\":10,\"total_entries\":1,\"total_pages\":1}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "606",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 21 Feb 2024 03:05:03 GMT",
+        "location": "/api/facility/careers",
+        "server": "Cowboy",
+        "x-request-id": "F7XByUfwkSUrtskAAATi"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
