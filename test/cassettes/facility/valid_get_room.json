@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/rooms/presidential-suite"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"layout\":false,\"room\":{\"banner\":\"/uploads/9c603e7c-7ee2-4dda-9f73-65f87cc665b3.jpeg?v=63873386135\",\"description\":\"Designed to give a luxurious feel, the Presidential Suite at MAHMC has a fully air conditioned single patient room, visitor’s room and lounge.\",\"featured\":true,\"id\":\"75f1ba86-711c-4ce3-9215-ceb371db1ff6\",\"inserted_at\":\"2024-01-12T06:00:37.000000Z\",\"name\":\"Presidential Suite\",\"photos\":[\"/uploads/room_photos/7768892c-cd41-422a-b84a-70e38bba33f8.jpg\",\"/uploads/room_photos/820dc2c8-46f2-4c93-b27f-ea7480878c37.jpg\",\"/uploads/room_photos/be865d12-2cc9-446e-91ce-4bf2585e9961.jpg\"],\"short_description\":\"Designed to give a luxurious feel, the Presidential Suite at MAHMC has a fully air conditioned single patient room, visitor’s room and lounge. \",\"slug\":\"presidential-suite\",\"updated_at\":\"2024-01-25T07:17:06.000000Z\"}}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "845",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 21 Feb 2024 03:05:05 GMT",
+        "location": "/api/facility/rooms/presidential-suite",
+        "server": "Cowboy",
+        "x-request-id": "F7XBybcv6wT0MBEAAAWi"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

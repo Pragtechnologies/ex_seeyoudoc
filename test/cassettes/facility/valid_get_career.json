@@ -20,10 +20,10 @@
         "cache-control": "max-age=0, private, must-revalidate",
         "content-length": "538",
         "content-type": "application/json; charset=utf-8",
-        "date": "Tue, 20 Feb 2024 07:32:53 GMT",
+        "date": "Wed, 21 Feb 2024 03:05:05 GMT",
         "location": "/api/facility/careers/nurses",
         "server": "Cowboy",
-        "x-request-id": "F7WB0nRhOSaMwI0AAAiB"
+        "x-request-id": "F7XBycpg6UMRWvQAAAXi"
       },
       "status_code": 200,
       "type": "ok"

@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/promos/thank-you-donors-for-our-mahmci-frontliners1"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"layout\":false,\"promo\":{\"active\":true,\"banner\":\"/uploads/c96d1ba0-01cf-44b3-9534-0f9db8522d60.png?v=63872862812\",\"description\":\"To all of you who've helped, who continue to support, and who have vowed to pray for our frontliners!\\n\\nOnce again, Thank you very much 💙\",\"featured\":true,\"id\":\"27d93f1b-1a95-4a76-ac38-c43acb5e51e7\",\"inserted_at\":\"2024-01-19T05:53:33.000000Z\",\"short_description\":\"A huge Thank you to all the donors who shared their blessings to our MAHMCI Frontliners.\",\"slug\":\"thank-you-donors-for-our-mahmci-frontliners1\",\"title\":\"Thank you donors for our MAHMCI Frontliners_1\",\"updated_at\":\"2024-01-19T05:53:33.000000Z\"}}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "650",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 21 Feb 2024 03:05:04 GMT",
+        "location": "/api/facility/promos/thank-you-donors-for-our-mahmci-frontliners1",
+        "server": "Cowboy",
+        "x-request-id": "F7XByW9jtmArTcsAAAjh"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -20,10 +20,10 @@
         "cache-control": "max-age=0, private, must-revalidate",
         "content-length": "965",
         "content-type": "application/json; charset=utf-8",
-        "date": "Tue, 20 Feb 2024 06:17:01 GMT",
+        "date": "Wed, 21 Feb 2024 03:05:04 GMT",
         "location": "/api/facility/about",
         "server": "Cowboy",
-        "x-request-id": "F7V9rpb5tBtJy6kAAC3h"
+        "x-request-id": "F7XByZFxKbuTHyIAAAVC"
       },
       "status_code": 200,
       "type": "ok"

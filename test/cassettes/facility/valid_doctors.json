@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/doctors/dr-suko"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"doctor\":{\"avatar\":\"/uploads/facility_avatars/d126b21d-bf88-45aa-9ac4-ff9319d136b1.jpg?v=63872765385\",\"description\":\"test\",\"id\":\"cfee09fd-8348-42cb-91ed-3682ace933aa\",\"name\":\"Dr Suko\",\"practitioner_role\":null,\"slug\":\"dr-suko\",\"specialty\":\"Pediatrics\",\"title\":\"Fire Lord\"},\"layout\":false}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "297",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 21 Feb 2024 03:05:03 GMT",
+        "location": "/api/facility/promos/dr-suko",
+        "server": "Cowboy",
+        "x-request-id": "F7XByV1Ze5IBf0YAAAih"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
