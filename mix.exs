@@ -1,7 +1,7 @@
 defmodule ExSeeyoudoc.MixProject do
   use Mix.Project
 
-  @version "0.1.2"
+  @version "0.1.3"
   @name "ExSeeyoudoc"
   @organization "pragtechnologies"
   @description "Elixir library for SeeYouDoc based on https://www.seeyoudoc.com/developer/api-reference"

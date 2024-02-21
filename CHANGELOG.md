@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.3 (2024-02-21)
+
+- Add multiple endpoint
+
+## v0.1.2 (2024-02-20)
+
+- Add tests
+
 ## v0.1.1 (2024-02-15)
 
 - Add Facility About
