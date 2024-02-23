@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.4 (2024-02-23)
+
+- add Events and Insurance api
+
 ## v0.1.3 (2024-02-21)
 
 - Add multiple endpoint
