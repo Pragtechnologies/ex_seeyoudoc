@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/insurances"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"entries\":[{\"avatar\":\"/uploads/e63b4270-45d6-4f5d-a3ca-b5cb6ccfd03c.jpg?v=63872266588\",\"description\":\"tet\",\"id\":\"7a79bbfa-ddf9-48ba-8bbd-47b5893e073d\",\"inserted_at\":\"2024-01-12T08:16:29.000000Z\",\"link\":\"tet\",\"name\":\"Hmo\"}],\"layout\":false,\"page_number\":1,\"page_size\":10,\"total_entries\":1,\"total_pages\":1}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "313",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Fri, 23 Feb 2024 03:50:45 GMT",
+        "location": "/api/facility/insurances",
+        "server": "Cowboy",
+        "x-request-id": "F7ZhcLpWvs43bvAAABdi"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

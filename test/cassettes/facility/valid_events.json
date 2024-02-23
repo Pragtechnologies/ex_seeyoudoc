@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/events"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"entries\":[{\"active\":true,\"banner\":\"/uploads/6834c34e-162d-4634-ae2e-d01c535cc84f.jpg?v=63875862645\",\"description\":\"Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,\",\"end_date\":\"2024-02-23\",\"featured\":true,\"id\":\"34aada64-9abe-4dc2-823d-620cd9979fde\",\"inserted_at\":\"2024-02-22T23:10:45.000000Z\",\"short_description\":\"Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,\",\"slug\":\"come-and-be-part-of-our-mahmci-family\",\"start_date\":\"2024-02-22\",\"title\":\"Come and be part of our MAHMCI Family\",\"updated_at\":\"2024-02-23T03:01:07.000000Z\"}],\"layout\":false,\"page_number\":1,\"page_size\":10,\"total_entries\":1,\"total_pages\":1}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "791",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Fri, 23 Feb 2024 03:40:45 GMT",
+        "location": "/api/facility/events",
+        "server": "Cowboy",
+        "x-request-id": "F7Zg5Sj-9OR_iv4AAIZB"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

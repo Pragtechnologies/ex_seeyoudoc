@@ -8,10 +8,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{}, headers)
   end
 
-  # def insurances(headers) do
-  #   "/facility/insurances"
-  #   |> ExSeeyoudoc.get(%{}, headers)
-  # end
+  def insurances(headers) do
+    "/facility/insurances"
+    |> ExSeeyoudoc.get(%{}, headers)
+  end
 
   def rooms(headers) do
     "/facility/rooms"
