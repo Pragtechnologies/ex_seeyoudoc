@@ -116,7 +116,7 @@ defmodule ExSeeyoudoc.FacilityTest do
         slug = "come-and-be-part-of-our-mahmci-family"
 
         assert {:ok, %{body: %{"data" => %{"event" => event}}}} =
-                 ExSeeyoudoc.Facility.get_events(headers, slug) |> IO.inspect()
+                 ExSeeyoudoc.Facility.get_events(headers, slug)
 
         assert %{
                  "active" => true,
