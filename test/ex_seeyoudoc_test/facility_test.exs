@@ -20,6 +20,124 @@ defmodule ExSeeyoudoc.FacilityTest do
     end
   end
 
+  describe "insurances/1" do
+    test "will return the insurances data and checks the first entry structure" do
+      use_cassette "valid_insurances" do
+        headers = %{
+          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "entries" => [first_entry | _],
+                      "layout" => layout,
+                      "page_number" => page_number,
+                      "page_size" => page_size,
+                      "total_entries" => total_entries,
+                      "total_pages" => total_pages
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.insurances(headers)
+
+        assert %{
+                 "avatar" => "/uploads/e63b4270-45d6-4f5d-a3ca-b5cb6ccfd03c.jpg?v=63872266588",
+                 "description" => "tet",
+                 "id" => "7a79bbfa-ddf9-48ba-8bbd-47b5893e073d",
+                 "inserted_at" => "2024-01-12T08:16:29.000000Z",
+                 "link" => "tet",
+                 "name" => "Hmo"
+               } = first_entry
+
+        assert layout == false
+        assert page_number == 1
+        assert page_size == 10
+        assert total_entries == 1
+        assert total_pages == 1
+      end
+    end
+  end
+
+  describe "events/1" do
+    test "will return the events data and checks the first entry structure" do
+      use_cassette "valid_events" do
+        headers = %{
+          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "entries" => [first_entry | _],
+                      "layout" => layout,
+                      "page_number" => page_number,
+                      "page_size" => page_size,
+                      "total_entries" => total_entries,
+                      "total_pages" => total_pages
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.events(headers)
+
+        assert %{
+                 "active" => true,
+                 "banner" => "/uploads/6834c34e-162d-4634-ae2e-d01c535cc84f.jpg?v=63875862645",
+                 "description" =>
+                   "Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,",
+                 "end_date" => "2024-02-23",
+                 "featured" => true,
+                 "id" => "34aada64-9abe-4dc2-823d-620cd9979fde",
+                 "inserted_at" => "2024-02-22T23:10:45.000000Z",
+                 "short_description" =>
+                   "Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,",
+                 "slug" => "come-and-be-part-of-our-mahmci-family",
+                 "start_date" => "2024-02-22",
+                 "title" => "Come and be part of our MAHMCI Family",
+                 "updated_at" => "2024-02-23T03:01:07.000000Z"
+               } = first_entry
+
+        assert layout == false
+        assert page_number == 1
+        assert page_size == 10
+        assert total_entries == 1
+        assert total_pages == 1
+      end
+    end
+
+    test "will return the event data by slug" do
+      use_cassette "valid_get_event" do
+        headers = %{
+          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
+        }
+
+        slug = "come-and-be-part-of-our-mahmci-family"
+
+        assert {:ok, %{body: %{"data" => %{"event" => event}}}} =
+                 ExSeeyoudoc.Facility.get_events(headers, slug)
+
+        assert %{
+                 "active" => true,
+                 "banner" => "/uploads/6834c34e-162d-4634-ae2e-d01c535cc84f.jpg?v=63875862645",
+                 "description" =>
+                   "Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,",
+                 "end_date" => "2024-02-23",
+                 "featured" => true,
+                 "id" => "34aada64-9abe-4dc2-823d-620cd9979fde",
+                 "inserted_at" => "2024-02-22T23:10:45.000000Z",
+                 "short_description" =>
+                   "Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,",
+                 "slug" => "come-and-be-part-of-our-mahmci-family",
+                 "start_date" => "2024-02-22",
+                 "title" => "Come and be part of our MAHMCI Family",
+                 "updated_at" => "2024-02-23T03:01:07.000000Z"
+               } = event
+      end
+    end
+  end
+
   describe "rooms/1" do
     test "will return the rooms data and checks the first entry structure" do
       use_cassette "valid_rooms" do
