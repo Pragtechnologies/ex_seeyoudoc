@@ -37,3 +37,6 @@ ex_seeyoudoc-*.tar
 
 # Secret config
 *.secret.exs
+
+# Ignore tool version
+.tool-versions
