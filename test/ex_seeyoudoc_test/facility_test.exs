@@ -10,11 +10,7 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "about/1" do
     test "will return the about data" do
       use_cassette "valid_about" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
-        assert {:ok, %{body: %{"data" => body}}} = ExSeeyoudoc.Facility.about(headers)
+        assert {:ok, %{body: %{"data" => body}}} = ExSeeyoudoc.Facility.about()
         assert body["facility"]["id"] == "5ad14cc2-b74e-48f6-a3a6-5597f2a1261d"
       end
     end
@@ -23,10 +19,6 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "insurances/1" do
     test "will return the insurances data and checks the first entry structure" do
       use_cassette "valid_insurances" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         assert {:ok,
                 %{
                   body: %{
@@ -40,7 +32,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.insurances(headers)
+                 ExSeeyoudoc.Facility.insurances()
 
         assert %{
                  "avatar" => "/uploads/e63b4270-45d6-4f5d-a3ca-b5cb6ccfd03c.jpg?v=63872266588",
@@ -63,10 +55,6 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "events/1" do
     test "will return the events data and checks the first entry structure" do
       use_cassette "valid_events" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         assert {:ok,
                 %{
                   body: %{
@@ -80,7 +68,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.events(headers)
+                 ExSeeyoudoc.Facility.events()
 
         assert %{
                  "active" => true,
@@ -109,14 +97,10 @@ defmodule ExSeeyoudoc.FacilityTest do
 
     test "will return the event data by slug" do
       use_cassette "valid_get_event" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         slug = "come-and-be-part-of-our-mahmci-family"
 
         assert {:ok, %{body: %{"data" => %{"event" => event}}}} =
-                 ExSeeyoudoc.Facility.get_events(headers, slug)
+                 ExSeeyoudoc.Facility.get_events(slug)
 
         assert %{
                  "active" => true,
@@ -141,10 +125,6 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "rooms/1" do
     test "will return the rooms data and checks the first entry structure" do
       use_cassette "valid_rooms" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         assert {:ok,
                 %{
                   body: %{
@@ -158,7 +138,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.rooms(headers)
+                 ExSeeyoudoc.Facility.rooms()
 
         assert %{
                  "banner" => "/uploads/9c603e7c-7ee2-4dda-9f73-65f87cc665b3.jpeg?v=63873386135",
@@ -189,14 +169,10 @@ defmodule ExSeeyoudoc.FacilityTest do
 
     test "will return the room data by slug" do
       use_cassette "valid_get_room" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         slug = "presidential-suite"
 
         assert {:ok, %{body: %{"data" => %{"room" => room}}}} =
-                 ExSeeyoudoc.Facility.get_rooms(headers, slug)
+                 ExSeeyoudoc.Facility.get_rooms(slug)
 
         assert %{
                  "banner" => "/uploads/9c603e7c-7ee2-4dda-9f73-65f87cc665b3.jpeg?v=63873386135",
@@ -223,10 +199,6 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "careers/1" do
     test "will return the career data and checks the first entry structure" do
       use_cassette "valid_careers" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         assert {:ok,
                 %{
                   body: %{
@@ -240,7 +212,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.careers(headers)
+                 ExSeeyoudoc.Facility.careers()
 
         assert %{
                  "active" => true,
@@ -269,14 +241,10 @@ defmodule ExSeeyoudoc.FacilityTest do
 
     test "returns the specific career data by slug" do
       use_cassette "valid_get_career" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         slug = "nurses"
 
         assert {:ok, %{body: %{"data" => %{"career" => career}}}} =
-                 ExSeeyoudoc.Facility.get_careers(headers, slug)
+                 ExSeeyoudoc.Facility.get_careers(slug)
 
         assert %{
                  "active" => true,
@@ -301,10 +269,6 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "services/1" do
     test "will return the service data and checks the first entry structure" do
       use_cassette "valid_services" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         assert {:ok,
                 %{
                   body: %{
@@ -318,7 +282,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.services(headers)
+                 ExSeeyoudoc.Facility.services()
 
         assert %{
                  "description" =>
@@ -338,14 +302,10 @@ defmodule ExSeeyoudoc.FacilityTest do
 
     test "returns the specific service data by slug" do
       use_cassette "valid_get_services" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         slug = "44c2be63-46c2-4365-bc5a-8522ee573d61"
 
         assert {:ok, %{body: %{"data" => %{"service" => service}}}} =
-                 ExSeeyoudoc.Facility.get_services(headers, slug)
+                 ExSeeyoudoc.Facility.get_services(slug)
 
         assert %{
                  "doctors" => [],
@@ -364,10 +324,6 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "promos/1" do
     test "will return the promos data and checks the first entry structure" do
       use_cassette "valid_promos" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         assert {:ok,
                 %{
                   body: %{
@@ -381,7 +337,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.promos(headers)
+                 ExSeeyoudoc.Facility.promos()
 
         assert %{
                  "active" => true,
@@ -408,14 +364,10 @@ defmodule ExSeeyoudoc.FacilityTest do
 
     test "returns the specific promo data by slug" do
       use_cassette "valid_get_promos" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         slug = "thank-you-donors-for-our-mahmci-frontliners1"
 
         assert {:ok, %{body: %{"data" => %{"promo" => promo}}}} =
-                 ExSeeyoudoc.Facility.get_promos(headers, slug)
+                 ExSeeyoudoc.Facility.get_promos(slug)
 
         assert %{
                  "active" => true,
@@ -438,14 +390,10 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "doctors/1" do
     test "returns the specific doctor data by slug" do
       use_cassette "valid_doctors" do
-        headers = %{
-          api_key: "YqCA/SFksMdDaXJqeCJVXYNfddg="
-        }
-
         slug = "dr-suko"
 
         assert {:ok, %{body: %{"data" => %{"doctor" => doctor}}}} =
-                 ExSeeyoudoc.Facility.get_doctors(headers, slug)
+                 ExSeeyoudoc.Facility.get_doctors(slug)
 
         assert %{
                  "avatar" =>
