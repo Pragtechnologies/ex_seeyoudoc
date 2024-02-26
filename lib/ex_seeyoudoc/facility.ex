@@ -3,68 +3,68 @@ defmodule ExSeeyoudoc.Facility do
     API for facility
   """
 
-  def about(headers) do
+  def about() do
     "/facility/about"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def insurances(headers) do
+  def insurances() do
     "/facility/insurances"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def rooms(headers) do
+  def rooms() do
     "/facility/rooms"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def get_rooms(headers, slug) do
+  def get_rooms(slug) do
     "/facility/rooms/#{slug}"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def careers(headers) do
+  def careers() do
     "/facility/careers"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def get_careers(headers, slug) do
+  def get_careers(slug) do
     "/facility/careers/#{slug}"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def services(headers) do
+  def services() do
     "/facility/services"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def get_services(headers, slug) do
+  def get_services(slug) do
     "/facility/services/#{slug}"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def promos(headers) do
+  def promos() do
     "/facility/promos"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def get_promos(headers, slug) do
+  def get_promos(slug) do
     "/facility/promos/#{slug}"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def events(headers) do
+  def events() do
     "/facility/events"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def get_events(headers, slug) do
+  def get_events(slug) do
     "/facility/events/#{slug}"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 
-  def get_doctors(headers, slug) do
+  def get_doctors(slug) do
     "/facility/doctors/#{slug}"
-    |> ExSeeyoudoc.get(%{}, headers)
+    |> ExSeeyoudoc.get(%{})
   end
 end
