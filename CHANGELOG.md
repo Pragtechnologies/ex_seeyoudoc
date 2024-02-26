@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.5 (2024-02-26)
+
+- Remove unused headers parameters
+
 ## v0.1.4 (2024-02-23)
 
 - add Events and Insurance api
