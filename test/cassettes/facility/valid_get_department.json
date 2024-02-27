@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/departments/cardiology"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"department\":{\"banner\":\"/uploads/48bd2304-350b-4ffb-beb7-e07735cb424f.jpeg?v=63876220428\",\"clinic_active\":null,\"clinic_id\":null,\"clinic_name\":null,\"clinic_published\":null,\"clinic_slug\":null,\"contact_no\":\"(02) 123 4567\",\"description\":\"The Cardiology Department provides comprehensive care for heart-related ailments.\",\"id\":\"69e930c0-7046-433e-8086-6a6143c847d4\",\"inserted_at\":\"2024-02-27T02:33:48.000000Z\",\"local_no\":\"1234\",\"name\":\"Cardiology\",\"room_no\":\"10A\",\"slug\":\"cardiology\",\"updated_at\":\"2024-02-27T02:33:48.000000Z\"},\"layout\":false}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "548",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 27 Feb 2024 03:32:53 GMT",
+        "location": "/api/facility/departments/cardiology",
+        "server": "Cowboy",
+        "x-request-id": "F7eXvX6fiZD3b70AABMC"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

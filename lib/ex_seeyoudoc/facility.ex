@@ -67,4 +67,19 @@ defmodule ExSeeyoudoc.Facility do
     "/facility/doctors/#{slug}"
     |> ExSeeyoudoc.get(%{})
   end
+
+  def departments() do
+    "/facility/departments"
+    |> ExSeeyoudoc.get(%{})
+  end
+
+  def get_department(slug) do
+    "/facility/departments/#{slug}"
+    |> ExSeeyoudoc.get(%{})
+  end
+
+  def department_doctors(department_id) do
+    "/facility/department-doctors/#{department_id}"
+    |> ExSeeyoudoc.get(%{})
+  end
 end
