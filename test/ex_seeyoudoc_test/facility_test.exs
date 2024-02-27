@@ -409,4 +409,136 @@ defmodule ExSeeyoudoc.FacilityTest do
       end
     end
   end
+
+  describe "departments/1" do
+    test "will return the departments data and checks the first entry structure" do
+      use_cassette "valid_departments" do
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "entries" => [first_entry | _],
+                      "layout" => layout,
+                      "page_number" => page_number,
+                      "page_size" => page_size,
+                      "total_entries" => total_entries,
+                      "total_pages" => total_pages
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.departments()
+
+        assert %{
+                 "banner" => "/uploads/48bd2304-350b-4ffb-beb7-e07735cb424f.jpeg?v=63876220428",
+                 "clinic_active" => nil,
+                 "clinic_id" => nil,
+                 "clinic_name" => nil,
+                 "clinic_published" => nil,
+                 "clinic_slug" => nil,
+                 "contact_no" => "(02) 123 4567",
+                 "description" =>
+                   "The Cardiology Department provides comprehensive care for heart-related ailments.",
+                 "id" => "69e930c0-7046-433e-8086-6a6143c847d4",
+                 "inserted_at" => "2024-02-27T02:33:48.000000Z",
+                 "local_no" => "1234",
+                 "name" => "Cardiology",
+                 "room_no" => "10A",
+                 "slug" => "cardiology",
+                 "updated_at" => "2024-02-27T02:33:48.000000Z"
+               } = first_entry
+
+        assert layout == false
+        assert page_number == 1
+        assert page_size == 10
+        assert total_entries == 1
+        assert total_pages == 1
+      end
+    end
+
+    test "returns the specific departments data by slug" do
+      use_cassette "valid_get_department" do
+        slug = "cardiology"
+
+        assert {:ok, %{body: %{"data" => %{"department" => department}}}} =
+                 ExSeeyoudoc.Facility.get_department(slug)
+
+        assert %{
+                 "banner" => "/uploads/48bd2304-350b-4ffb-beb7-e07735cb424f.jpeg?v=63876220428",
+                 "clinic_active" => nil,
+                 "clinic_id" => nil,
+                 "clinic_name" => nil,
+                 "clinic_published" => nil,
+                 "clinic_slug" => nil,
+                 "contact_no" => "(02) 123 4567",
+                 "description" =>
+                   "The Cardiology Department provides comprehensive care for heart-related ailments.",
+                 "id" => "69e930c0-7046-433e-8086-6a6143c847d4",
+                 "inserted_at" => "2024-02-27T02:33:48.000000Z",
+                 "local_no" => "1234",
+                 "name" => "Cardiology",
+                 "room_no" => "10A",
+                 "slug" => "cardiology",
+                 "updated_at" => "2024-02-27T02:33:48.000000Z"
+               } = department
+      end
+    end
+
+    test "returns the specific department doctors data by department id" do
+      use_cassette "valid_department_doctors" do
+        department_id = "69e930c0-7046-433e-8086-6a6143c847d4"
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "entries" => [first_entry | _],
+                      "layout" => layout,
+                      "page_number" => page_number,
+                      "page_size" => page_size,
+                      "total_entries" => total_entries,
+                      "total_pages" => total_pages
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.department_doctors(department_id)
+
+        assert %{
+                 "avatar" => "",
+                 "description" =>
+                   "Dr. Olga Santiago is a highly skilled and experienced cardiologist serving the community of Metro Antipolo. With a compassionate approach to patient care and a commitment to excellence, Dr. Santiago provides comprehensive cardiovascular services to her patients.",
+                 "id" => "c9a4e54c-6d9b-49a1-af80-7595c946226f",
+                 "name" => "Dr. Olga Santiago",
+                 "practitioner_role" => %{
+                   "clinic" => "TB Clinic at BHU Moonwalk",
+                   "clinic_is_open" => nil,
+                   "clinic_slug" => "tb-clinic-at-bhu-moonwalk",
+                   "id" => "5493c1f4-252a-404c-846a-6d65520c02ef",
+                   "name" => "Dr. Olga",
+                   "room_no" => nil,
+                   "schedules" => [
+                     %{
+                       "days_of_week" => ["thu", "fri"],
+                       "end_time" => "15:00:00",
+                       "start_time" => "08:00:00",
+                       "timeslot_cutoff" => 4,
+                       "timeslot_duration" => 30,
+                       "timezone" => "Asia/Manila"
+                     }
+                   ],
+                   "slug" => "dr-olga",
+                   "title" => "M.D, CCS"
+                 },
+                 "slug" => "dr-olga-santiago",
+                 "specialty" => "Cardio",
+                 "title" => "Cardiologist"
+               } = first_entry
+
+        assert layout == false
+        assert page_number == 1
+        assert page_size == 10
+        assert total_entries == 1
+        assert total_pages == 1
+      end
+    end
+  end
 end
