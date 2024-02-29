@@ -388,23 +388,112 @@ defmodule ExSeeyoudoc.FacilityTest do
   end
 
   describe "doctors/1" do
-    test "returns the specific doctor data by slug" do
+    test "will return the doctors data and checks the first entry structure" do
       use_cassette "valid_doctors" do
-        slug = "dr-suko"
-
-        assert {:ok, %{body: %{"data" => %{"doctor" => doctor}}}} =
-                 ExSeeyoudoc.Facility.get_doctors(slug)
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "doctors" => [first_entry | _]
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.doctors()
 
         assert %{
                  "avatar" =>
                    "/uploads/facility_avatars/d126b21d-bf88-45aa-9ac4-ff9319d136b1.jpg?v=63872765385",
                  "description" => "test",
+                 "facility_id" => "5ad14cc2-b74e-48f6-a3a6-5597f2a1261d",
                  "id" => "cfee09fd-8348-42cb-91ed-3682ace933aa",
                  "name" => "Dr Suko",
-                 "practitioner_role" => nil,
+                 "practitioner" => nil,
                  "slug" => "dr-suko",
                  "specialty" => "Pediatrics",
                  "title" => "Fire Lord"
+               } = first_entry
+      end
+    end
+
+    test "returns the specific doctor data by search name and verifies the first entry details" do
+      use_cassette "valid_search_doctor" do
+        query_params = %{
+          q: "Dr. Olga"
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "doctors" => [first_entry | _]
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.doctors(query_params)
+
+        assert %{
+                 "avatar" => "",
+                 "description" =>
+                   "Dr. Olga Santiago is a highly skilled and experienced cardiologist serving the community of Metro Antipolo. With a compassionate approach to patient care and a commitment to excellence, Dr. Santiago provides comprehensive cardiovascular services to her patients.",
+                 "facility_id" => "5ad14cc2-b74e-48f6-a3a6-5597f2a1261d",
+                 "id" => "c9a4e54c-6d9b-49a1-af80-7595c946226f",
+                 "name" => "Dr. Olga Santiago",
+                 "practitioner" => %{
+                   "id" => "5493c1f4-252a-404c-846a-6d65520c02ef",
+                   "name" => "Dr. Olga",
+                   "room_no" => nil,
+                   "schedules" => [
+                     %{
+                       "days_of_week" => ["thu", "fri"],
+                       "end_time" => "15:00:00",
+                       "start_time" => "08:00:00",
+                       "timeslot_cutoff" => 4,
+                       "timeslot_duration" => 30,
+                       "timezone" => "Asia/Manila"
+                     }
+                   ],
+                   "title" => "M.D, CCS"
+                 },
+                 "slug" => "dr-olga-santiago",
+                 "specialty" => "Cardio",
+                 "title" => "Cardiologist"
+               } = first_entry
+      end
+    end
+
+    test "returns the specific doctor data by slug" do
+      use_cassette "valid_get_doctor" do
+        slug = "dr-olga-santiago"
+
+        assert {:ok, %{body: %{"data" => %{"doctor" => doctor}}}} =
+                 ExSeeyoudoc.Facility.get_doctors(slug)
+
+        assert %{
+                 "avatar" => "",
+                 "description" =>
+                   "Dr. Olga Santiago is a highly skilled and experienced cardiologist serving the community of Metro Antipolo. With a compassionate approach to patient care and a commitment to excellence, Dr. Santiago provides comprehensive cardiovascular services to her patients.",
+                 "id" => "c9a4e54c-6d9b-49a1-af80-7595c946226f",
+                 "name" => "Dr. Olga Santiago",
+                 "practitioner_role" => %{
+                   "clinic" => "TB Clinic at BHU Moonwalk",
+                   "clinic_is_open" => nil,
+                   "clinic_slug" => "tb-clinic-at-bhu-moonwalk",
+                   "id" => "5493c1f4-252a-404c-846a-6d65520c02ef",
+                   "name" => "Dr. Olga",
+                   "room_no" => nil,
+                   "schedules" => [
+                     %{
+                       "days_of_week" => ["thu", "fri"],
+                       "end_time" => "15:00:00",
+                       "start_time" => "08:00:00",
+                       "timeslot_cutoff" => 4,
+                       "timeslot_duration" => 30,
+                       "timezone" => "Asia/Manila"
+                     }
+                   ],
+                   "slug" => "dr-olga",
+                   "title" => "M.D, CCS"
+                 }
                } = doctor
       end
     end
