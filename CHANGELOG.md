@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.7 (2024-02-29)
+
+- Add facility doctor api
+
 ## v0.1.6 (2024-02-29)
 
 - Add department apis
