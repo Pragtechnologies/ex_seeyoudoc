@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/doctors/dr-olga-santiago"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"doctor\":{\"avatar\":\"\",\"description\":\"Dr. Olga Santiago is a highly skilled and experienced cardiologist serving the community of Metro Antipolo. With a compassionate approach to patient care and a commitment to excellence, Dr. Santiago provides comprehensive cardiovascular services to her patients.\",\"id\":\"c9a4e54c-6d9b-49a1-af80-7595c946226f\",\"name\":\"Dr. Olga Santiago\",\"practitioner_role\":{\"clinic\":\"TB Clinic at BHU Moonwalk\",\"clinic_is_open\":null,\"clinic_slug\":\"tb-clinic-at-bhu-moonwalk\",\"id\":\"5493c1f4-252a-404c-846a-6d65520c02ef\",\"name\":\"Dr. Olga\",\"room_no\":null,\"schedules\":[{\"days_of_week\":[\"thu\",\"fri\"],\"end_time\":\"15:00:00\",\"start_time\":\"08:00:00\",\"timeslot_cutoff\":4,\"timeslot_duration\":30,\"timezone\":\"Asia/Manila\"}],\"slug\":\"dr-olga\",\"title\":\"M.D, CCS\"},\"slug\":\"dr-olga-santiago\",\"specialty\":\"Cardio\",\"title\":\"Cardiologist\"},\"layout\":false}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "863",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 29 Feb 2024 03:52:28 GMT",
+        "location": "/api/facility/promos/dr-olga-santiago",
+        "server": "Cowboy",
+        "x-request-id": "F7gzthYKP9hJRXUAAB0B"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

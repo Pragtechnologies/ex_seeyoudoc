@@ -11,19 +11,19 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "http://localhost:4100/api/facility/doctors/dr-suko"
+      "url": "http://localhost:4100/api/facility/doctors??"
     },
     "response": {
       "binary": false,
-      "body": "{\"data\":{\"doctor\":{\"avatar\":\"/uploads/facility_avatars/d126b21d-bf88-45aa-9ac4-ff9319d136b1.jpg?v=63872765385\",\"description\":\"test\",\"id\":\"cfee09fd-8348-42cb-91ed-3682ace933aa\",\"name\":\"Dr Suko\",\"practitioner_role\":null,\"slug\":\"dr-suko\",\"specialty\":\"Pediatrics\",\"title\":\"Fire Lord\"},\"layout\":false}}",
+      "body": "{\"data\":{\"doctors\":[{\"avatar\":\"/uploads/facility_avatars/d126b21d-bf88-45aa-9ac4-ff9319d136b1.jpg?v=63872765385\",\"description\":\"test\",\"facility_id\":\"5ad14cc2-b74e-48f6-a3a6-5597f2a1261d\",\"id\":\"cfee09fd-8348-42cb-91ed-3682ace933aa\",\"name\":\"Dr Suko\",\"practitioner\":null,\"slug\":\"dr-suko\",\"specialty\":\"Pediatrics\",\"title\":\"Fire Lord\"},{\"avatar\":\"\",\"description\":\"Dr. Olga Santiago is a highly skilled and experienced cardiologist serving the community of Metro Antipolo. With a compassionate approach to patient care and a commitment to excellence, Dr. Santiago provides comprehensive cardiovascular services to her patients.\",\"facility_id\":\"5ad14cc2-b74e-48f6-a3a6-5597f2a1261d\",\"id\":\"c9a4e54c-6d9b-49a1-af80-7595c946226f\",\"name\":\"Dr. Olga Santiago\",\"practitioner\":{\"id\":\"5493c1f4-252a-404c-846a-6d65520c02ef\",\"name\":\"Dr. Olga\",\"room_no\":null,\"schedules\":[{\"days_of_week\":[\"thu\",\"fri\"],\"end_time\":\"15:00:00\",\"start_time\":\"08:00:00\",\"timeslot_cutoff\":4,\"timeslot_duration\":30,\"timezone\":\"Asia/Manila\"}],\"title\":\"M.D, CCS\"},\"slug\":\"dr-olga-santiago\",\"specialty\":\"Cardio\",\"title\":\"Cardiologist\"},{\"avatar\":\"/uploads/facility_avatars/3c30d2d6-5ecd-4bd9-a6b1-2ba2c285e82d.jpg?v=63872765714\",\"description\":\"tes\",\"facility_id\":\"5ad14cc2-b74e-48f6-a3a6-5597f2a1261d\",\"id\":\"e1a95354-8f31-4c7a-bcf8-484bd898026f\",\"name\":\"Dr CF\",\"practitioner\":{\"id\":\"5493c1f4-252a-404c-846a-6d65520c02ef\",\"name\":\"Dr. Olga\",\"room_no\":null,\"schedules\":[{\"days_of_week\":[\"thu\",\"fri\"],\"end_time\":\"15:00:00\",\"start_time\":\"08:00:00\",\"timeslot_cutoff\":4,\"timeslot_duration\":30,\"timezone\":\"Asia/Manila\"}],\"title\":\"M.D, CCS\"},\"slug\":\"dr-cf\",\"specialty\":\"Public Health\",\"title\":\"motor china\"},{\"avatar\":\"/uploads/facility_avatars/7d51ad4f-637d-4650-9eeb-5796a15b8ef9.jpg?v=63872765609\",\"description\":\"test\",\"facility_id\":\"5ad14cc2-b74e-48f6-a3a6-5597f2a1261d\",\"id\":\"515333fb-4977-4180-91d1-6a0af35c37a9\",\"name\":\"Dr Ang\",\"practitioner\":null,\"slug\":\"dr-ang\",\"specialty\":\"Family Medicine\",\"title\":\"Air bender\"}],\"layout\":false}}",
       "headers": {
         "cache-control": "max-age=0, private, must-revalidate",
-        "content-length": "297",
+        "content-length": "1985",
         "content-type": "application/json; charset=utf-8",
-        "date": "Wed, 21 Feb 2024 03:05:03 GMT",
-        "location": "/api/facility/promos/dr-suko",
+        "date": "Thu, 29 Feb 2024 03:52:28 GMT",
+        "location": "/api/facility/doctors",
         "server": "Cowboy",
-        "x-request-id": "F7XByV1Ze5IBf0YAAAih"
+        "x-request-id": "F7gztgLtluDfuHAAABzB"
       },
       "status_code": 200,
       "type": "ok"
