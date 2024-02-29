@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.6 (2024-02-29)
+
+- Add department apis
+
 ## v0.1.5 (2024-02-26)
 
 - Remove unused headers parameters
