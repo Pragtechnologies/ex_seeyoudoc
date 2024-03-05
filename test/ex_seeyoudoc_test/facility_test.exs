@@ -23,31 +23,42 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
                  ExSeeyoudoc.Facility.insurances()
 
         assert %{
-                 "avatar" => "/uploads/e63b4270-45d6-4f5d-a3ca-b5cb6ccfd03c.jpg?v=63872266588",
-                 "description" => "tet",
-                 "id" => "7a79bbfa-ddf9-48ba-8bbd-47b5893e073d",
-                 "inserted_at" => "2024-01-12T08:16:29.000000Z",
-                 "link" => "tet",
-                 "name" => "Hmo"
+                 "avatar" =>
+                   "/uploads/facility_avatars/5783a587-bbfd-44fb-9610-16055667803e.jpg?v=63876300900",
+                 "description" =>
+                   "EastWest Healthcare is likely a healthcare provider or insurance company, offering a range of medical services or health insurance products. They may provide access to a network of healthcare facilities and professionals, ensuring comprehensive care and support for their clients.",
+                 "id" => "6f9227e6-22d0-4b37-8549-abea4b67194b",
+                 "inserted_at" => "2024-02-28T00:55:00.000000Z",
+                 "link" => "www.example.com",
+                 "name" => "Eastwest Healthcare"
                } = first_entry
+      end
+    end
 
-        assert layout == false
-        assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 1
-        assert total_pages == 1
+    test "will return the insurances data limited by the specified page_size" do
+      use_cassette "insurances_with_valid_params" do
+        query_params = %{
+          page_size: 100
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_size" => page_size
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.insurances(query_params)
+
+        assert page_size == 100
       end
     end
   end
@@ -282,7 +293,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.services()
+                 ExSeeyoudoc.Facility.services() |> IO.inspect()
 
         assert %{
                  "description" =>

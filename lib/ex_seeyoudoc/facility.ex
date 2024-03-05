@@ -8,8 +8,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def insurances() do
-    "/facility/insurances"
+  def insurances(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/insurances?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
