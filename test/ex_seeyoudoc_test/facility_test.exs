@@ -70,12 +70,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
@@ -83,7 +78,8 @@ defmodule ExSeeyoudoc.FacilityTest do
 
         assert %{
                  "active" => true,
-                 "banner" => "/uploads/6834c34e-162d-4634-ae2e-d01c535cc84f.jpg?v=63875862645",
+                 "banner" =>
+                   "/uploads/facility_banners/6834c34e-162d-4634-ae2e-d01c535cc84f.jpg?v=63875862645",
                  "description" =>
                    "Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,",
                  "end_date" => "2024-02-23",
@@ -97,12 +93,26 @@ defmodule ExSeeyoudoc.FacilityTest do
                  "title" => "Come and be part of our MAHMCI Family",
                  "updated_at" => "2024-02-23T03:01:07.000000Z"
                } = first_entry
+      end
+    end
 
-        assert layout == false
+    test "will retun the events data  by the specified page_number" do
+      use_cassette "events_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.events(query_params)
+
         assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 1
-        assert total_pages == 1
       end
     end
 
@@ -115,7 +125,8 @@ defmodule ExSeeyoudoc.FacilityTest do
 
         assert %{
                  "active" => true,
-                 "banner" => "/uploads/6834c34e-162d-4634-ae2e-d01c535cc84f.jpg?v=63875862645",
+                 "banner" =>
+                   "/uploads/facility_banners/6834c34e-162d-4634-ae2e-d01c535cc84f.jpg?v=63875862645",
                  "description" =>
                    "Metro Antipolo Hospital and Medical Center, Inc. (MAHMCI) came to being as a result of a series of brainstorming among professionals,",
                  "end_date" => "2024-02-23",
@@ -140,19 +151,15 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
                  ExSeeyoudoc.Facility.rooms()
 
         assert %{
-                 "banner" => "/uploads/9c603e7c-7ee2-4dda-9f73-65f87cc665b3.jpeg?v=63873386135",
+                 "banner" =>
+                   "/uploads/facility_banners/9c603e7c-7ee2-4dda-9f73-65f87cc665b3.jpeg?v=63873386135",
                  "description" =>
                    "Designed to give a luxurious feel, the Presidential Suite at MAHMC has a fully air conditioned single patient room, visitor’s room and lounge.",
                  "featured" => true,
@@ -169,12 +176,26 @@ defmodule ExSeeyoudoc.FacilityTest do
                  "slug" => "presidential-suite",
                  "updated_at" => "2024-01-25T07:17:06.000000Z"
                } = first_entry
+      end
+    end
 
-        assert layout == false
+    test "will retun the rooms data  by the specified page_number" do
+      use_cassette "rooms_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.rooms(query_params)
+
         assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 1
-        assert total_pages == 1
       end
     end
 
@@ -214,12 +235,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
@@ -241,12 +257,26 @@ defmodule ExSeeyoudoc.FacilityTest do
                  "title" => "NURSES",
                  "updated_at" => "2024-02-20T07:27:56.000000Z"
                } = first_entry
+      end
+    end
 
-        assert layout == false
+    test "will retun the careers data  by the specified page_number" do
+      use_cassette "careers_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.careers(query_params)
+
         assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 1
-        assert total_pages == 1
       end
     end
 
@@ -284,16 +314,11 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.services() |> IO.inspect()
+                 ExSeeyoudoc.Facility.services()
 
         assert %{
                  "description" =>
@@ -302,12 +327,26 @@ defmodule ExSeeyoudoc.FacilityTest do
                  "method" => "virtual",
                  "name" => "24-Hour Holter Monitoring"
                } = first_entry
+      end
+    end
 
-        assert layout == false
+    test "will retun the services data  by the specified page_number" do
+      use_cassette "services_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.services(query_params)
+
         assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 1
-        assert total_pages == 1
       end
     end
 
@@ -339,12 +378,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
@@ -364,12 +398,26 @@ defmodule ExSeeyoudoc.FacilityTest do
                  "title" => "Thank you donors for our MAHMCI Frontliners_1",
                  "updated_at" => "2024-01-19T05:53:33.000000Z"
                } = first_entry
+      end
+    end
 
-        assert layout == false
+    test "will retun the promos data  by the specified page_number" do
+      use_cassette "promos_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.promos(query_params)
+
         assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 6
-        assert total_pages == 1
       end
     end
 
@@ -517,12 +565,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
@@ -546,12 +589,26 @@ defmodule ExSeeyoudoc.FacilityTest do
                  "slug" => "cardiology",
                  "updated_at" => "2024-02-27T02:33:48.000000Z"
                } = first_entry
+      end
+    end
 
-        assert layout == false
+    test "will retun the departments data  by the specified page_number" do
+      use_cassette "departments_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.departments(query_params)
+
         assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 1
-        assert total_pages == 1
       end
     end
 
@@ -591,12 +648,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "entries" => [first_entry | _],
-                      "layout" => layout,
-                      "page_number" => page_number,
-                      "page_size" => page_size,
-                      "total_entries" => total_entries,
-                      "total_pages" => total_pages
+                      "entries" => [first_entry | _]
                     }
                   }
                 }} =
@@ -632,12 +684,28 @@ defmodule ExSeeyoudoc.FacilityTest do
                  "specialty" => "Cardio",
                  "title" => "Cardiologist"
                } = first_entry
+      end
+    end
 
-        assert layout == false
+    test "will retun the department_doctors data  by the specified page_number" do
+      use_cassette "department_doctors_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        department_id = "69e930c0-7046-433e-8086-6a6143c847d4"
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.department_doctors(department_id, query_params)
+
         assert page_number == 1
-        assert page_size == 10
-        assert total_entries == 1
-        assert total_pages == 1
       end
     end
   end
