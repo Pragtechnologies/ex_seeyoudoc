@@ -11,7 +11,7 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "http://localhost:4100/api/facility/rooms??"
+      "url": "http://localhost:4100/api/facility/rooms?page_number=1?"
     },
     "response": {
       "binary": false,
@@ -20,10 +20,10 @@
         "cache-control": "max-age=0, private, must-revalidate",
         "content-length": "932",
         "content-type": "application/json; charset=utf-8",
-        "date": "Mon, 18 Mar 2024 02:26:25 GMT",
+        "date": "Mon, 18 Mar 2024 00:52:41 GMT",
         "location": "/api/facility/rooms",
         "server": "Cowboy",
-        "x-request-id": "F726kNDhjhhtKIAAAC9i"
+        "x-request-id": "F721puqQvAq_U5UAAANi"
       },
       "status_code": 200,
       "type": "ok"

@@ -11,7 +11,7 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "http://localhost:4100/api/facility/events??"
+      "url": "http://localhost:4100/api/facility/events?page_number=2?"
     },
     "response": {
       "binary": false,
@@ -20,10 +20,10 @@
         "cache-control": "max-age=0, private, must-revalidate",
         "content-length": "808",
         "content-type": "application/json; charset=utf-8",
-        "date": "Mon, 18 Mar 2024 02:28:31 GMT",
+        "date": "Tue, 05 Mar 2024 03:01:25 GMT",
         "location": "/api/facility/events",
         "server": "Cowboy",
-        "x-request-id": "F726rnvKC1Uo9rIAADRB"
+        "x-request-id": "F7m_IhK6DLrTw_wAAAnh"
       },
       "status_code": 200,
       "type": "ok"

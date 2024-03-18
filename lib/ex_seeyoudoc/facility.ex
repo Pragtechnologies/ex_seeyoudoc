@@ -8,13 +8,17 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def insurances() do
-    "/facility/insurances"
+  def insurances(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/insurances?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
-  def rooms() do
-    "/facility/rooms"
+  def rooms(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/rooms?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
@@ -23,8 +27,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def careers() do
-    "/facility/careers"
+  def careers(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/careers?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
@@ -33,8 +39,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def services() do
-    "/facility/services"
+  def services(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/services?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
@@ -43,8 +51,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def promos() do
-    "/facility/promos"
+  def promos(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/promos?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
@@ -53,8 +63,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def events() do
-    "/facility/events"
+  def events(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/events?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
@@ -75,8 +87,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def departments() do
-    "/facility/departments"
+  def departments(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/departments?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 
@@ -85,8 +99,10 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def department_doctors(department_id) do
-    "/facility/department-doctors/#{department_id}"
+  def department_doctors(department_id, params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/department-doctors/#{department_id}?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
 end

@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/promos?page_number=1?"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"entries\":[{\"active\":true,\"banner\":\"/uploads/facility_banners/c96d1ba0-01cf-44b3-9534-0f9db8522d60.png?v=63872862812\",\"description\":\"To all of you who've helped, who continue to support, and who have vowed to pray for our frontliners!\\n\\nOnce again, Thank you very much 💙\",\"featured\":true,\"id\":\"27d93f1b-1a95-4a76-ac38-c43acb5e51e7\",\"inserted_at\":\"2024-01-19T05:53:33.000000Z\",\"short_description\":\"A huge Thank you to all the donors who shared their blessings to our MAHMCI Frontliners.\",\"slug\":\"thank-you-donors-for-our-mahmci-frontliners1\",\"title\":\"Thank you donors for our MAHMCI Frontliners_1\",\"updated_at\":\"2024-01-19T05:53:33.000000Z\"},{\"active\":true,\"banner\":\"/uploads/facility_banners/c45238d0-789a-48d3-b428-7a02a91dbac9.png?v=63872862741\",\"description\":\"To all of you who've helped, who continue to support, and who have vowed to pray for our frontliners!\\n\\nOnce again, Thank you very much 💙\",\"featured\":true,\"id\":\"64928974-5f02-4f3e-9b29-daba5cdb5bb1\",\"inserted_at\":\"2024-01-19T05:52:22.000000Z\",\"short_description\":\"A huge Thank you to all the donors who shared their blessings to our MAHMCI Frontliners.\",\"slug\":\"thank-you-donors-for-our-mahmci-frontliners\",\"title\":\"Thank you donors for our MAHMCI Frontliners\",\"updated_at\":\"2024-01-19T05:52:22.000000Z\"},{\"active\":true,\"banner\":\"/uploads/facility_banners/6f5ff526-4e5e-4951-a537-a5bd7f183fd3.png?v=63872862864\",\"description\":\"To set for an appointment, you may call 8-722-3208 loc 3303 / 0948-3260293.\",\"featured\":true,\"id\":\"d1ecf0dd-b648-4252-b5bf-b879ddd6c769\",\"inserted_at\":\"2024-01-19T05:54:24.000000Z\",\"short_description\":\"Metro Antipolo Hospital and Medical Center's DENTAL CLINIC is now open to serve patients on a BY APPOINTMENT BASIS.\",\"slug\":\"the-dentist-is-in\",\"title\":\"The Dentist is IN\",\"updated_at\":\"2024-01-19T05:54:24.000000Z\"},{\"active\":true,\"banner\":\"/uploads/facility_banners/96e413d2-036e-4d0a-b280-e2ede74fd511.png?v=63872862927\",\"description\":\".\",\"featured\":true,\"id\":\"2c85bdf5-c3b8-4ea6-b2b8-b83218f7099f\",\"inserted_at\":\"2024-01-19T05:55:28.000000Z\",\"short_description\":\"Chemotherapy and Transfusion Unit is now ready to serve you\",\"slug\":\"chemotherapy-and-transfusion-unit\",\"title\":\"Chemotherapy and Transfusion Unit\",\"updated_at\":\"2024-01-19T05:55:28.000000Z\"},{\"active\":true,\"banner\":\"/uploads/facility_banners/37a8fa59-b1fc-4f8f-8e5c-302ac1d74ad7.png?v=63872863028\",\"description\":\"For inquiries and to set for an appointment, you may call 8-722-3208.\",\"featured\":true,\"id\":\"f07d6826-5cd8-4f25-9421-42f66787bacb\",\"inserted_at\":\"2024-01-19T05:57:08.000000Z\",\"short_description\":null,\"slug\":\"mahmci-services\",\"title\":\"MAHMCI Services\",\"updated_at\":\"2024-01-19T05:57:08.000000Z\"},{\"active\":true,\"banner\":\"\",\"description\":\"ADVISORY:\\n\\n \\n\\nFor inquiries you may call our trunkline: 8-722-3208.\\n\\nHere are the following contact details (local):\\n\\nER - 1013\\n\\nAdmitting - 1011\\n\\nBilling - 1015\\n\\nCashier - 1014\\n\\nLaboratory - 1020\\n\\nRadiology - 1010\\n\\nPharmacy - 1019\\n\\n \\n\\nKeep Safe everyone! 💙\",\"featured\":true,\"id\":\"18b697e4-52d5-4da3-b288-2281f124b170\",\"inserted_at\":\"2024-01-19T05:58:05.000000Z\",\"short_description\":null,\"slug\":\"mahmci-advisory\",\"title\":\"MAHMCI ADVISORY\",\"updated_at\":\"2024-01-19T05:58:05.000000Z\"}],\"layout\":false,\"page_number\":1,\"page_size\":10,\"total_entries\":6,\"total_pages\":1}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "3318",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Mon, 18 Mar 2024 01:36:26 GMT",
+        "location": "/api/facility/promos",
+        "server": "Cowboy",
+        "x-request-id": "F724CejKvWeLai0AAC5h"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

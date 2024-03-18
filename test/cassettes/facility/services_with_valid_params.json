@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/services?page_number=1?"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"entries\":[{\"amount\":\"₱500.00\",\"currency\":\"PHP\",\"description\":\"Twenty-four hour Holter monitoring is a continuous test to record your heart's rate and rhythm for 24 hours.\",\"id\":\"44c2be63-46c2-4365-bc5a-8522ee573d61\",\"method\":\"virtual\",\"name\":\"24-Hour Holter Monitoring\",\"published\":true}],\"layout\":false,\"page_number\":1,\"page_size\":10,\"total_entries\":1,\"total_pages\":1}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "382",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Mon, 18 Mar 2024 01:31:31 GMT",
+        "location": "/api/facility/services",
+        "server": "Cowboy",
+        "x-request-id": "F723xWZH71lyJUYAAC4B"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
