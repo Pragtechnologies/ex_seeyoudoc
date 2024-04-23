@@ -709,4 +709,84 @@ defmodule ExSeeyoudoc.FacilityTest do
       end
     end
   end
+
+  describe "department_v2/1" do
+    test "will return the department_v2 data and checks the first entry structure" do
+      use_cassette "valid_department_v2" do
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "entries" => [first_entry | _]
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.department_v2()
+
+        assert %{
+                 "banner" =>
+                   "/uploads/facility_banners/48bd2304-350b-4ffb-beb7-e07735cb424f.jpeg?v=63876220428",
+                 "contact_no" => "(02) 123 4567",
+                 "description" =>
+                   "The Cardiology Department provides comprehensive care for heart-related ailments.",
+                 "id" => "69e930c0-7046-433e-8086-6a6143c847d4",
+                 "inserted_at" => "2024-02-27T02:33:48.000000Z",
+                 "local_no" => "1234",
+                 "name" => "Cardiology",
+                 "room_no" => "10A",
+                 "slug" => "cardiology",
+                 "updated_at" => "2024-02-27T02:33:48.000000Z"
+               } = first_entry
+      end
+    end
+
+    test "will retun the department_v2 data  by the specified page_number" do
+      use_cassette "department_v2_with_valid_params" do
+        query_params = %{
+          page_number: 1
+        }
+
+        assert {:ok,
+                %{
+                  body: %{
+                    "data" => %{
+                      "page_number" => page_number
+                    }
+                  }
+                }} =
+                 ExSeeyoudoc.Facility.department_v2(query_params)
+
+        assert page_number == 1
+      end
+    end
+
+    test "returns the specific department_v2 data by slug" do
+      use_cassette "valid_get_department_v2" do
+        slug = "cardiology"
+
+        assert {:ok, %{body: %{"data" => %{"department" => department}}}} =
+                 ExSeeyoudoc.Facility.get_department(slug)
+
+        assert %{
+                 "banner" =>
+                   "/uploads/facility_banners/48bd2304-350b-4ffb-beb7-e07735cb424f.jpeg?v=63876220428",
+                 "clinic_active" => nil,
+                 "clinic_id" => nil,
+                 "clinic_name" => nil,
+                 "clinic_published" => nil,
+                 "clinic_slug" => nil,
+                 "contact_no" => "(02) 123 4567",
+                 "description" =>
+                   "The Cardiology Department provides comprehensive care for heart-related ailments.",
+                 "id" => "69e930c0-7046-433e-8086-6a6143c847d4",
+                 "inserted_at" => "2024-02-27T02:33:48.000000Z",
+                 "local_no" => "1234",
+                 "name" => "Cardiology",
+                 "room_no" => "10A",
+                 "slug" => "cardiology",
+                 "updated_at" => "2024-02-27T02:33:48.000000Z"
+               } = department
+      end
+    end
+  end
 end

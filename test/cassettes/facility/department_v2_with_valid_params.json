@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "accept-encoding": "gzip",
+        "api-key": "YqCA/SFksMdDaXJqeCJVXYNfddg=",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4100/api/facility/departments_v2?page_number=1?"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":{\"entries\":[{\"banner\":\"/uploads/facility_banners/48bd2304-350b-4ffb-beb7-e07735cb424f.jpeg?v=63876220428\",\"contact_no\":\"(02) 123 4567\",\"description\":\"The Cardiology Department provides comprehensive care for heart-related ailments.\",\"id\":\"69e930c0-7046-433e-8086-6a6143c847d4\",\"inserted_at\":\"2024-02-27T02:33:48.000000Z\",\"local_no\":\"1234\",\"name\":\"Cardiology\",\"room_no\":\"10A\",\"slug\":\"cardiology\",\"updated_at\":\"2024-02-27T02:33:48.000000Z\"},{\"banner\":\"\",\"contact_no\":\"423432\",\"description\":\"tyr\",\"id\":\"053efd0b-2a14-458e-87a7-2c46e9259d31\",\"inserted_at\":\"2024-03-18T01:24:31.000000Z\",\"local_no\":\"432\",\"name\":\"Presidential Suite\",\"room_no\":\"32\",\"slug\":\"presidential-suite\",\"updated_at\":\"2024-03-18T01:24:31.000000Z\"}],\"layout\":false,\"page_number\":1,\"page_size\":10,\"total_entries\":2,\"total_pages\":1}}",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "804",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Tue, 23 Apr 2024 20:16:16 GMT",
+        "location": "/api/facility/departments_v2",
+        "server": "Cowboy",
+        "x-request-id": "F8kCCnOPaSIwz4kAAAZh"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
