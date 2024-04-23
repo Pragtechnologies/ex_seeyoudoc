@@ -105,4 +105,16 @@ defmodule ExSeeyoudoc.Facility do
     "/facility/department-doctors/#{department_id}?#{query_params}"
     |> ExSeeyoudoc.get(%{})
   end
+
+  def departments_v2(params \\ %{}) do
+    query_params = URI.encode_query(params)
+
+    "/facility/departments_v2?#{query_params}"
+    |> ExSeeyoudoc.get(%{})
+  end
+
+  def get_department_v2(slug) do
+    "/facility/departments_v2/#{slug}"
+    |> ExSeeyoudoc.get(%{})
+  end
 end
