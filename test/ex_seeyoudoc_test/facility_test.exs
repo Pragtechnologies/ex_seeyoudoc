@@ -710,9 +710,9 @@ defmodule ExSeeyoudoc.FacilityTest do
     end
   end
 
-  describe "department_v2/1" do
-    test "will return the department_v2 data and checks the first entry structure" do
-      use_cassette "valid_department_v2" do
+  describe "departments_v2/1" do
+    test "will return the departments_v2 data and checks the first entry structure" do
+      use_cassette "valid_departments_v2" do
         assert {:ok,
                 %{
                   body: %{
@@ -721,7 +721,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.department_v2()
+                 ExSeeyoudoc.Facility.departments_v2()
 
         assert %{
                  "banner" =>
@@ -740,8 +740,8 @@ defmodule ExSeeyoudoc.FacilityTest do
       end
     end
 
-    test "will retun the department_v2 data  by the specified page_number" do
-      use_cassette "department_v2_with_valid_params" do
+    test "will retun the departments_v2 data  by the specified page_number" do
+      use_cassette "departments_v2_with_valid_params" do
         query_params = %{
           page_number: 1
         }
@@ -754,13 +754,13 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.department_v2(query_params)
+                 ExSeeyoudoc.Facility.departments_v2(query_params)
 
         assert page_number == 1
       end
     end
 
-    test "returns the specific department_v2 data by slug" do
+    test "returns the specific departments_v2 data by slug" do
       use_cassette "valid_get_department_v2" do
         slug = "cardiology"
 

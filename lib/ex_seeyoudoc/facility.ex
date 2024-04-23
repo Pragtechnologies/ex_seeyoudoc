@@ -106,7 +106,7 @@ defmodule ExSeeyoudoc.Facility do
     |> ExSeeyoudoc.get(%{})
   end
 
-  def department_v2(params \\ %{}) do
+  def departments_v2(params \\ %{}) do
     query_params = URI.encode_query(params)
 
     "/facility/departments_v2?#{query_params}"

@@ -20,10 +20,10 @@
         "cache-control": "max-age=0, private, must-revalidate",
         "content-length": "565",
         "content-type": "application/json; charset=utf-8",
-        "date": "Tue, 23 Apr 2024 20:16:17 GMT",
+        "date": "Tue, 23 Apr 2024 21:49:05 GMT",
         "location": "/api/facility/departments/cardiology",
         "server": "Cowboy",
-        "x-request-id": "F8kCCpy3QkQpAQMAAAEC"
+        "x-request-id": "F8kEn9sUWDjt5LwAAAeB"
       },
       "status_code": 200,
       "type": "ok"
