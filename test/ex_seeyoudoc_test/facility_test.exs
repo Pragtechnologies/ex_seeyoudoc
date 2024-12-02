@@ -453,23 +453,22 @@ defmodule ExSeeyoudoc.FacilityTest do
                 %{
                   body: %{
                     "data" => %{
-                      "doctors" => [first_entry | _]
+                      "hits" => [first_entry | _]
                     }
                   }
                 }} =
                  ExSeeyoudoc.Facility.doctors()
 
         assert %{
-                 "avatar" =>
-                   "/uploads/facility_avatars/d126b21d-bf88-45aa-9ac4-ff9319d136b1.jpg?v=63872765385",
-                 "description" => "test",
-                 "facility_id" => "5ad14cc2-b74e-48f6-a3a6-5597f2a1261d",
-                 "id" => "cfee09fd-8348-42cb-91ed-3682ace933aa",
-                 "name" => "Dr Suko",
+                 "avatar" => "",
+                 "description" => nil,
+                 "facility_id" => "7398ff44-2959-4049-aeed-e09c46e33e07",
+                 "id" => "f7d80973-6173-475c-9d7a-7c5a78ab9322",
+                 "name" => "Dr. Noel",
                  "practitioner" => nil,
-                 "slug" => "dr-suko",
-                 "specialty" => "Pediatrics",
-                 "title" => "Fire Lord"
+                 "slug" => "dr-noel",
+                 "specialty" => "Hand Surgery",
+                 "title" => "MD"
                } = first_entry
       end
     end
