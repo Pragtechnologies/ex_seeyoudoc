@@ -76,10 +76,8 @@ defmodule ExSeeyoudoc.Facility do
   end
 
   def doctors(params \\ %{}) do
-    query_params = URI.encode_query(params)
-
-    "/facility/doctors?#{query_params}"
-    |> ExSeeyoudoc.get(%{})
+    "/facility/doctors"
+    |> ExSeeyoudoc.get(params)
   end
 
   def get_doctors(slug) do

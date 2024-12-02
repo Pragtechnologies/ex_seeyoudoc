@@ -449,6 +449,8 @@ defmodule ExSeeyoudoc.FacilityTest do
   describe "doctors/1" do
     test "will return the doctors data and checks the first entry structure" do
       use_cassette "valid_doctors" do
+        params = %{page: 1}
+
         assert {:ok,
                 %{
                   body: %{
@@ -457,7 +459,7 @@ defmodule ExSeeyoudoc.FacilityTest do
                     }
                   }
                 }} =
-                 ExSeeyoudoc.Facility.doctors()
+                 ExSeeyoudoc.Facility.doctors(params)
 
         assert %{
                  "avatar" => "",
